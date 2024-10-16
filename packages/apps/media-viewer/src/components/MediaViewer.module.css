@@ -13,8 +13,33 @@
   object-fit: contain;
 }
 
+.audioViewer {
+  width: 70%;
+  margin: 10px auto 0 auto;
+}
+
+.audioViewer 
+
 .audioControls {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.audioControls button {
+  margin: 1rem;
+  padding: 7px 0;
+  width: 20%;
+  border-radius: 5rem;
+}
+
+.isPlaying {
+  background-color: var(--purple-0);
+  color: var(--white-0);
+}
+
+.isNotPlaying {
+  background-color: var(--red-0);
+  color: var(--white-0);
 }

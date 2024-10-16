@@ -111,17 +111,17 @@ export function MediaViewer({ file, close, setTitle }: MediaViewerProps) {
 
   if (AUDIO_EXTENSIONS.includes(file.extension)) {
     return (
-      <article>
-        <p>Playing audio: {file.id}</p>
+      <article className={styles.audioViewer}>
+        <h3>Playing audio: {file.id}</h3>
         <audio ref={audioRef} controls />
         <div className={styles.audioControls}>
-          <button onClick={handlePlay} disabled={isPlaying}>
+          <button className={`${isPlaying ? styles.isPlaying : styles.isNotPlaying}`} onClick={handlePlay} disabled={isPlaying}>
             Play
           </button>
-          <button onClick={handlePause} disabled={!isPlaying}>
+          <button className={`${isPlaying ? styles.isPlaying : styles.isNotPlaying}`} onClick={handlePause} disabled={!isPlaying}>
             Pause
           </button>
-          <button onClick={handleStop}>Stop</button>
+          <button className={`${isPlaying ? styles.isPlaying : styles.isNotPlaying}`} onClick={handleStop}>Stop</button>
         </div>
       </article>
     );
